@@ -15,7 +15,7 @@ public class RideRepositoryExcel extends RideRepository {
         }
     }
 
-    public Ride[] getRides(String userId) {
-        return this.userRides.get(userId).toArray(new Ride[0]);
+    public List<Ride> getRides(String userId) {
+        return this.userRides.get(userId);
     }
 }

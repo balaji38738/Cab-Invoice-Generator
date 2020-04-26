@@ -8,17 +8,15 @@ public class InvoiceServiceTest {
     InvoiceService invoiceService = null;
     InvoiceSummary expectedInvoiceSummary = null;
     private RideRepository rideRepository = null;
-    Ride[] rides;
+    List<Ride> rides = new ArrayList<>();
 
     @Before
     public void setUp() throws Exception {
         invoiceService = new InvoiceService();
         rideRepository = new RideRepositoryInMemory();
         invoiceService.setRideRepository(rideRepository);
-        rides = new Ride[]{
-                new NormalRide(CabRide.NORMAL, 2.0, 5),
-                new PremiumRide(CabRide.PREMIUM, 0.1, 1)
-        };
+        rides.add(new NormalRide(CabRide.NORMAL, 2.0, 5));
+        rides.add(new PremiumRide(CabRide.PREMIUM, 0.1, 1));
         expectedInvoiceSummary = new InvoiceSummary(2, 45.0);
     }
 

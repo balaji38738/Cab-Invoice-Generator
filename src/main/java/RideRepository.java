@@ -1,6 +1,6 @@
 import java.util.*;
 
 public abstract class RideRepository {
-    public abstract void addRides(String userId, List<? extends Ride> rides);
-    public abstract Ride[] getRides(String userId);
+    public abstract void addRides(String userId, List<Ride> rides);
+    public abstract List<Ride> getRides(String userId);
 }
