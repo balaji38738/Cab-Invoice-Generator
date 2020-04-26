@@ -1,4 +1,4 @@
-public class Ride {
+public abstract class Ride {
     public int time;
     public double distance;
     public CabRide cabRide;
@@ -8,4 +8,6 @@ public class Ride {
         this.time = time;
         this.cabRide = cabRide;
     }
+
+    public abstract void printRide ();
 }

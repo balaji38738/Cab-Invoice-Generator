@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class InvoiceService {
     private RideRepository rideRepository;
 
@@ -13,7 +15,7 @@ public class InvoiceService {
         return new InvoiceSummary(rides.length, totalFare);
     }
 
-    public void addRides(String userId, Ride[] rides) {
+    public void addRides(String userId, List<Ride> rides) {
         rideRepository.addRides(userId, rides);
     }
 
